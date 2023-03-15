@@ -1,0 +1,21 @@
+Shopping Cart sederhana (menambahkan barang ke shopping cart dan calculate jumlah barang).
+
+READ AND WRITE "Harga_item" with number
+READ AND WRITE "Jumlah_item" with number
+READ AND WRITE "Harga_total" with number
+READ AND WRITE "Harga_sementara" with number
+READ AND WRITE "Jumlah_total" with number
+
+store Jumlah_item
+store Harga_item
+store Harga_sementara with Jumlah_item multiply by Harga_item
+IF Harga_total equals 0
+    store Harga_total with Harga_sementara
+ELSE
+    store Harga_total with Harga_sementara plus Harga_total
+ENDIF
+IF Jumlah_total equals 0
+  store Jumlah_total with Jumlah_item
+ELSE
+  store Jumlah_total with Jumlah_total plus Jumlah_item
+ENDIF
